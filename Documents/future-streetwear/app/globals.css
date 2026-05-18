@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-space-grotesk), sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-bebas), sans-serif;
+  letter-spacing: 0.05em;
+}
+
+::selection {
+  background-color: #39FF14;
+  color: #000;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #39FF14; }
+
+@keyframes neon-pulse {
+  0%, 100% { text-shadow: 0 0 10px #39FF14, 0 0 30px #39FF14, 0 0 60px #39FF14; }
+  50%       { text-shadow: 0 0 5px #39FF14; }
+}
+
+.neon-glow {
+  color: #39FF14;
+  animation: neon-pulse 3s ease-in-out infinite;
+}
+
+.glitch-hover:hover {
+  animation: glitch 0.3s steps(1) infinite;
+}
